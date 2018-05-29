@@ -1,3 +1,15 @@
+Demo link:
+
+https://hknews.herokuapp.com
+
+( 1. Render only component that changed)
+( 2. Use Link to route. It will not request the page from server again.)
+( 3. Number of comments added)
+
+fast run:
+
+npm install
+npm run start
 
 
 Notes:

@@ -26,6 +26,6 @@
     "eject": "react-scripts eject"
   },
 
-  "homepage": "http://shonpro.5gbfree.com/"
+  "homepage": "http://localhost:3000/"
 
 }

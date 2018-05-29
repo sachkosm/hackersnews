@@ -26,6 +26,9 @@ const initialState = {
 		author: '',
 		title: '',
 		url: ''
+	},
+	rowsComments: {
+		children: []
 	}
 };
 
@@ -40,7 +43,7 @@ export default(state = initialState, action) => {
 		case LOAD_DATA_SUCCESS:
 			return $.extend({}, state, { rows: action.data }, { dataLoaded: 'none' });
 		case LOAD_COMMENTS_SUCCESS:
-				return $.extend({}, state, { rows: action.data }, { dataLoaded: 'none' }, { commentsLoaded: 'block' });
+				return $.extend({}, state, { rowsComments: action.data }, { dataLoaded: 'none' }, { commentsLoaded: 'block' });
 		case DATA_IS_LOADED_ALREADY:
 			return state
 		default:
@@ -66,7 +69,7 @@ export const loadCommentsSuccess = (data) => {
 }
 
 export const fetchData = (state) => {
-	console.log('fetching data')
+	console.log('fetching news')
 	return dispatch => {
 		dispatch({
 			type: FETCH_DATA_REQUESTED

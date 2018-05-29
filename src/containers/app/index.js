@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../home';
 import Comments from '../home/comments';
 import { connect } from 'react-redux';
@@ -16,7 +16,7 @@ class App extends React.Component {
     <header>
     <div id='cssmenu' >
       <ul>
-        <li><a className=" center" href='/news'>Hacker News - Front Page</a></li>
+        <li><Link className="center" to='/'>Hacker News - Front Page</Link> ( Updated version - 5/29/2018, render and routing optimized)</li>
       </ul>
       </div>
     </header>
