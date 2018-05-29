@@ -26,6 +26,6 @@
     "eject": "react-scripts eject"
   },
 
-  "homepage": "http://localhost:3000/"
+  "homepage": "https://hknews.herokuapp.com/news"
 
 }
