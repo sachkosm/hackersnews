@@ -20,10 +20,11 @@ class Comments extends React.Component {
 		this.props.fetchComments(this.props.match.params.id);
 	}
 	componentDidMount() {
+			console.log(this.interval)
 		this.interval = setInterval(this.updateData, this.state.updateInterval);
 	}
 	componentDidUpdate() {
-		console.log('ComponentUpdated')
+		//console.log('ComponentUpdated')
 		this.setExpandable();
 
 	}

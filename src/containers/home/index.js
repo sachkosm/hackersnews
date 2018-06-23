@@ -11,7 +11,7 @@ class Home extends React.Component {
 		super(props, context);
 		this.updateComponent = this.updateComponent.bind(this);
 		this.updateData = this.updateData.bind(this);
-		this.state = { rows: null, updateInterval: Config.updateInterval * 1000  }
+		this.state = { rows: null, updateInterval: Config.updateInterval * 1000 }
 	}
 
 	componentWillMount() {
@@ -19,17 +19,18 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log(this.interval)
+
 		this.interval = setInterval(this.updateData, this.state.updateInterval);
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
 	}
 
-  updateData(){
+	updateData() {
 		this.props.fetchData();
 	}
-	updateComponent(){
-	}
+	updateComponent() {}
 
 	render() {
 		let rows = this.props.rows;
